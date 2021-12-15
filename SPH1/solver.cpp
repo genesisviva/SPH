@@ -12,8 +12,8 @@ Solver::~Solver()
 
 void Solver::initialize()
 {
-	worldSize_width = 1.0f;
-	worldSize_height = 1.0f;
+	worldSize_width = 1;
+	worldSize_height = 1;
 
 
 	external_force.x = EXTERNAL_FORCE_X;

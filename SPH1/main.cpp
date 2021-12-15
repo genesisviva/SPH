@@ -68,9 +68,9 @@ void display()
 	glEnable(GL_BLEND);
 	glEnable(GL_POINT_SMOOTH);
 	glHint(GL_POINT_SMOOTH_HINT, GL_NICEST);
-	glClearColor(1.0f, 1.0f, 1.0f, 1.0);
+	glClearColor(1.0, 1.0, 1.0, 1.0);
 	glClear(GL_COLOR_BUFFER_BIT);
-	glColor3f(0.0f, 0.0f, 1.0f);
+	glColor3f(0.0, 0.0, 1.0);
 	if(keyPause == 0)
 		sphSolver->update();
 	render();

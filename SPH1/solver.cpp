@@ -33,7 +33,7 @@ void Solver::calculateDensityPressure()
 {
 	for (int i = 0; i < currentParticles; i++)		//For each particle
 	{
-		particles[i]->density = 0.0f;				//Zeroing this particle density
+		particles[i]->density = 0;				//Zeroing this particle density
 
 		for (int j = 0; j < currentParticles; j++)	//For each other particle
 		{
@@ -106,7 +106,7 @@ void Solver::ForwardEuler()
 			particles[i]->position.x = worldSize_width - BOUNDARY;
 		}
 
-		if (particles[i]->position.x < 0.f)
+		if (particles[i]->position.x < 0)
 		{
 			particles[i]->velocity.x = particles[i]->velocity.x * BOUND_DAMP;
 			particles[i]->position.x = BOUNDARY;
@@ -118,7 +118,7 @@ void Solver::ForwardEuler()
 			particles[i]->position.y = worldSize_height - BOUNDARY;
 		}
 
-		if (particles[i]->position.y < 0.f)
+		if (particles[i]->position.y < 0)
 		{
 			particles[i]->velocity.y = particles[i]->velocity.y * BOUND_DAMP;
 			particles[i]->position.y = BOUNDARY;
@@ -126,7 +126,7 @@ void Solver::ForwardEuler()
 
 		
 
-		particles[i]->evelocity = (particles[i]->evelocity + particles[i]->velocity) / 2.f;
+		particles[i]->evelocity = (particles[i]->evelocity + particles[i]->velocity) / 2;
 	}
 }
 

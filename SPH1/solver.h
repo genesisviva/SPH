@@ -36,8 +36,8 @@ struct Particle
 		id = id_;
 		mass = DEFAULT_MASS;
 		density = DENSITY_0;
-		pressure = 0.f;
-		acceleration = 0.f;
+		pressure = 0;
+		acceleration = 0;
 		this->position = position;
 		this->velocity = velocity;
 	}
@@ -64,7 +64,7 @@ public:
 
 	void initialize();
 	void update();
-	void addParticle(vector_2D pos, vector_2D vel = vector_2D(0.0f, 0.0f));
+	void addParticle(vector_2D pos, vector_2D vel = vector_2D(0, 0));
 
 	Particle* particles[1000000];
 	float worldSize_width;
